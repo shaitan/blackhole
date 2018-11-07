@@ -3,7 +3,7 @@
 DH_VERBOSE = 1
 
 %:
-	dh $@ 
+	dh $@ --parallel
 
 override_dh_auto_configure:
 	cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX:PATH=/usr -DCMAKE_VERBOSE_MAKEFILE=ON
